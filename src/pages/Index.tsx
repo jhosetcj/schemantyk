@@ -25,7 +25,7 @@ const Index = () => {
       <Button
         onClick={toggleDarkMode}
         variant="outline"
-        className={`fixed top-6 right-6 z-10 rounded-full px-4 py-2 border transition-colors ${
+        className={`fixed top-6 right-6 z-10 rounded-full px-6 py-1 border transition-colors ${
           isDarkMode 
             ? 'border-white text-white hover:bg-white hover:text-black' 
             : 'border-black text-black hover:bg-black hover:text-white'
