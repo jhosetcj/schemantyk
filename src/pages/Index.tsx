@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -34,10 +33,10 @@ const Index = () => {
         {isDarkMode ? 'Light' : 'Dark'}
       </Button>
 
-      <div className="max-w-2xl mx-auto px-6 py-16">
+      <main className="max-w-2xl mx-auto px-6 py-16">
         
         {/* Logo */}
-        <div className="mb-16">
+        <header className="mb-16">
           <img 
             src={isDarkMode 
               ? "/lovable-uploads/1311198a-601d-4962-ba6e-b84121320a56.png" 
@@ -46,10 +45,11 @@ const Index = () => {
             alt="Schemantyk Logo" 
             className="w-24 h-24"
           />
-        </div>
+        </header>
 
         {/* Company Description */}
-        <div className="mb-16">
+        <section className="mb-16" aria-labelledby="company-description-heading">
+          <h2 id="company-description-heading" className="sr-only">Company Description</h2>
           <div className="space-y-4 text-lg leading-relaxed">
             <p>
               Schemantyk is an independent digital product studio.
@@ -61,11 +61,11 @@ const Index = () => {
               We design meaningful structures. Systems that think. Forms that evolve.
             </p>
           </div>
-        </div>
+        </section>
 
         {/* Products Section */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-normal mb-6">Products</h2>
+        <section className="mb-16" aria-labelledby="products-heading">
+          <h2 id="products-heading" className="text-2xl font-normal mb-6">Products</h2>
           <div className="space-y-3">
             <div className={`border-b pb-2 ${isDarkMode ? 'border-white' : 'border-black'}`}>
               <span className="text-lg">Coming Soon</span>
@@ -105,11 +105,11 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Links Section */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-normal">Links</h2>
+        <section aria-labelledby="links-heading">
+          <h2 id="links-heading" className="text-2xl font-normal mb-6">Links</h2>
           
           <div className="space-y-3">
             <div className="flex flex-col space-y-2">
@@ -135,15 +135,15 @@ const Index = () => {
               </a>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Footer */}
-        <div className={`mt-16 pt-8 border-t ${isDarkMode ? 'border-white' : 'border-black'}`}>
+        <footer className={`mt-16 pt-8 border-t ${isDarkMode ? 'border-white' : 'border-black'}`}>
           <p className="text-sm opacity-70">
             © 2024 Schemantyk. Independent digital product studio.
           </p>
-        </div>
-      </div>
+        </footer>
+      </main>
     </div>
   );
 };
